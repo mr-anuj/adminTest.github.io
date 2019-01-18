@@ -1,11 +1,66 @@
-import React from 'react'
+import React from 'react';
+import { Grid } from 'semantic-ui-react';
+import CourseDetailedHeader  from './CourseDetailedHeader';
+import CourseDetailedChat from './CourseDetailedChat';
+import CourseDetailedInfo from './CourseDetailedInfo';
+import CourseDetailedSidebar from './CourseDetailedSideBar';
+import { connect } from 'react-redux';
 
-function CourseDetailed() {
+const mapState =(state, ownProps) => {
+    const eventId = ownProps.match.params.id;
+
+    let event={};
+
+    if(eventId && state.events.length > 0){
+      event = state.events.filter(event => event.id === eventId)[0];
+    }
+
+    return{
+      event
+    }
+}
+
+// const event ={
+  
+//     id: '1',
+//     title: 'Trip to Tower of London',
+//     date: '2018-03-27',
+//     category: 'culture',
+//     description:
+//       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sollicitudin ligula eu leo tincidunt, quis scelerisque magna dapibus. Sed eget ipsum vel arcu vehicula ullamcorper.',
+//     city: 'London, UK',
+//     venue: "Tower of London, St Katharine's & Wapping, London",
+//     hostedBy: 'Bob',
+//     hostPhotoURL: 'https://randomuser.me/api/portraits/men/20.jpg',
+//     attendees: [
+//       {
+//         id: 'a',
+//         name: 'Bob',
+//         photoURL: 'https://randomuser.me/api/portraits/men/20.jpg'
+//       },
+//       {
+//         id: 'b',
+//         name: 'Tom',
+//         photoURL: 'https://randomuser.me/api/portraits/men/22.jpg'
+//       }
+//     ]
+//   }
+
+
+
+const CourseDetailed=({event})=> {
   return (
-    <div>
-      
-    </div>
+    <Grid>
+        <Grid.Column width={10}>
+            <CourseDetailedHeader event={event}/>
+            <CourseDetailedInfo event={event}/>
+            <CourseDetailedChat/>
+        </Grid.Column>
+        <Grid.Column width={6}>
+            <CourseDetailedSidebar attendees={event.attendees}/>
+        </Grid.Column>
+    </Grid>
   )
 }
 
-export default CourseDetailed
+export default connect(mapState) (CourseDetailed);

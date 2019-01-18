@@ -9,6 +9,7 @@ import UserDetailedPage from '../../features/user/UserDetailed/UserDetailedPage'
 import SettingsDashboard from '../../features/user/Settings/SettingsDashboard';
 import CourseForm from '../../features/course/CourseForm/CourseForm';
 import HomePage from '../../features/home/HomePage';
+import TestComponent from '../../features/testarea/TestComponent';
  
 class App extends Component {
   render() {
@@ -22,9 +23,10 @@ class App extends Component {
                <NavBar/>
                 <Container className="main">
                   <Switch>
-                     
+                    <Route path='/test' component={ TestComponent}/>                       
                       <Route path='/events' component={ CourseDashboard}/>
-                      <Route path='/event/:id' componrnt={CourseDetailed}/>
+                      <Route path='/event/:id' component={CourseDetailed}/>
+                      <Route path='/manage/:id' component={CourseForm}/>
                       <Route path='/people' component={ PeopleDashboard}/>
                       <Route path='/profile/:id' component={UserDetailedPage }/>
                       <Route path='/settings' component={ SettingsDashboard}/>

@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import {Segment, Item, Icon, Button, List} from 'semantic-ui-react';
 import CourseListAttendee from './CourseListAttendee';
+import { Link } from 'react-router-dom'
 
  class CourseListItem extends Component {
 
   render() {
-    const {event, onEventOpen,deleteEvent} = this.props;
+    // const {event, onEventOpen,deleteEvent} = this.props;
+    const {event,deleteEvent} = this.props;
     return (
                  <Segment.Group>
                     <Segment>
@@ -38,14 +40,15 @@ import CourseListAttendee from './CourseListAttendee';
                     <Segment clearing>
                         <span>{event.description}</span>
                       <Button onClick={deleteEvent(event.id)} as="a" color="red" floated="right" content="Delete" />
-                      <Button onClick={onEventOpen(event)} as="a" color="teal" floated="right" content="View" />
+                      {/* <Button onClick={onEventOpen(event)} as="a" color="teal" floated="right" content="View" /> */}
+                       <Button as={Link} to={`/event/${event.id}`} color="teal" floated="right" content="View" /> 
+
 
                     </Segment>
                   </Segment.Group>
     )
   }
 }
-
 export default CourseListItem
 
 
