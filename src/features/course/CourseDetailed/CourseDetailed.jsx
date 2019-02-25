@@ -51,14 +51,20 @@ const mapState =(state, ownProps) => {
 const CourseDetailed=({event})=> {
   return (
     <Grid>
-        <Grid.Column width={10}>
+        <Grid.Column width={16}>
             <CourseDetailedHeader event={event}/>
-            <CourseDetailedInfo event={event}/>
-            <CourseDetailedChat/>
         </Grid.Column>
-        <Grid.Column width={6}>
+            <Grid.Column width={12}>
+            <CourseDetailedInfo event={event}/>
+            </Grid.Column>
+           
+            {/* <CourseDetailedChat/> */}
+        
+        <Grid.Column width={4}>
             <CourseDetailedSidebar attendees={event.attendees}/>
         </Grid.Column>
+
+
     </Grid>
   )
 }

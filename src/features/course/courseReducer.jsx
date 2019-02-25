@@ -13,6 +13,23 @@ const initialState = [
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sollicitudin ligula eu leo tincidunt, quis scelerisque magna dapibus. Sed eget ipsum vel arcu vehicula ullamcorper.',
       city: 'London, UK',
       venue: "Tower of London, St Katharine's & Wapping, London",
+      career:[
+        "dataBase Admin",
+        "System Admin",
+        "Web Admin"
+      ],
+        
+
+      courseOverview:[
+        "Introduction to the command line",
+        "Managing physical storage",
+        "Learning how to install and configure software components and services",
+        "Establishing network connections and firewall access",
+        "Monitoring and managing processes",
+        "Managing and securing files",
+        "Administrating users and groups"
+      ],
+      
       hostedBy: 'Bob',
       hostPhotoURL: 'https://randomuser.me/api/portraits/men/20.jpg',
       attendees: [
@@ -39,6 +56,22 @@ const initialState = [
       venue: 'Punch & Judy, Henrietta Street, London, UK',
       hostedBy: 'Tom',
       hostPhotoURL: 'https://randomuser.me/api/portraits/men/22.jpg',
+      career:[
+        "Sit man",
+        "Test Carreer",
+        "Web Admin"
+      ],
+      courseOverview:[
+        "Introduction to the command line--1",
+        "Managing physical storage--2",
+        "Learning how to install and configure software components and services--3",
+        "Establishing network connections and firewall access--4",
+        "Monitoring and managing processes --4",
+        "Managing and securing files--5",
+        "Administrating users and groups--6"
+      ],
+
+      
       attendees: [
         {
           id: 'b',
@@ -63,6 +96,20 @@ const initialState = [
       venue: 'Kathmandu City ',
       hostedBy: 'Anuj',
       hostPhotoURL: 'https://randomuser.me/api/portraits/men/22.jpg',
+      career:[
+        "test admin",
+        "id3 Admin",
+        "Web design"
+      ],
+      courseOverview:[
+        "Introduction to the command line--2",
+        "Managing physical storage--3",
+        "Learning how to install and configure software components and services--4",
+        "Establishing network connections and firewall access--5",
+        "Monitoring and managing processes --6",
+        "Managing and securing files--7",
+        "Administrating users and groups--8"
+      ],
       attendees: [
         {
           id: 'b',

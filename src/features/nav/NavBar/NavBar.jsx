@@ -32,7 +32,7 @@ handleSignOut = () => {
                   </Menu.Item>
                   <Menu.Item as={NavLink} to='/events' name="Events" />
                   <Menu.Item as={NavLink} to='/test' name="Test" />
-
+                  <Menu.Item as={NavLink} to='/course' name="Courses" />
                   {authenticated &&
                   <Menu.Item as={NavLink} to='/people' name="People" />}
                    {authenticated &&

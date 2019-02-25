@@ -98,13 +98,16 @@ handleDeleteEvent = (eventId) => () => {
     const {events}= this.props;
     return (
       <Grid>
-          <Grid.Column width={10}>
+         <Grid.Row>
+         <Grid.Column width={12}>
                 {/* <CourseList events={eventsDashboard}/> */}
                 <CourseList 
                 deleteEvent={this.handleDeleteEvent} 
                 // onEventOpen={this.handleOpenEvent}
                 events={events}/>
           </Grid.Column>
+     
+         
           <Grid.Column width={6}>
                   {/* <Button onClick={this.handleFormOpen} positive content="Create Course"/>
                   {this.state.isOpen && (
@@ -113,7 +116,9 @@ handleDeleteEvent = (eventId) => () => {
                   selectedEvent={selectedEvent} 
                   createEvent={this.handleCreateEvent} 
                   handleCancle={this.handleCancle}/>)} */}
+                 
           </Grid.Column>
+          </Grid.Row>
       </Grid>
     )
   }
